@@ -14,6 +14,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: ['winter', 'night']
+  },
+  darkMode: ['class', '[data-theme="night"]']
 };
 export default config;
