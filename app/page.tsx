@@ -14,7 +14,7 @@ export default function Home() {
               I’m Jerome Orio, a software developer passionate about creating innovative solutions. This portfolio highlights my journey through coding, problem-solving, and collaboration.
               Feel free to explore my projects, and don’t hesitate to reach out if you’d like to connect!
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn btn-primary">Download CV</button>
           </div>
         </div>
       </div>
