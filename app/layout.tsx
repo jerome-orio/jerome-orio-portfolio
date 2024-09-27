@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Niknokkk",
-  description: "My personal portfolio.",
+  title: "Jerome Orio",
+  description: "Jerome Orio personal portfolio.",
   icons: [{ rel: 'icon', url: Favicon.src }],
 };
 
