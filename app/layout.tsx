@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Jerome Orio | Expert Software Developer Portfolio",
-  description: "Welcome to the portfolio of Jerome Orio, a skilled software developer specializing in Java, JavaScript, React, Next.js, Angular, Svelte, TypeScript, Node.js, Oracle, and NoSQL databases. Discover innovative projects and my approach to web development.",
+  description: "I’m Jerome Orio, a software developer skilled in Java, JavaScript, React, Angular, Svelte, TypeScript, Node.js, Oracle, and NoSQL. Explore my projects!",
   keywords: [
     "Jerome Orio",
     "Software Developer",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Jerome Orio", url: "https://jerome-orio-portfolio.vercel.app/" }],
   openGraph: {
     title: "Jerome Orio | Expert Software Developer Portfolio",
-    description: "Welcome to the portfolio of Jerome Orio, a skilled software developer specializing in Java, JavaScript, React, Next.js, Angular, Svelte, TypeScript, Node.js, Oracle, and NoSQL databases. Discover innovative projects and my approach to web development.",
+    description: "I’m Jerome Orio, a software developer skilled in Java, JavaScript, React, Angular, Svelte, TypeScript, Node.js, Oracle, and NoSQL. Explore my projects!",
     type: "website",
     url: "https://jerome-orio-portfolio.vercel.app/",
     locale: "en_US",
