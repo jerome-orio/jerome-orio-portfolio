@@ -1,11 +1,7 @@
 export default function Home() {
   return (
-    <main>
-      <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage: "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
-        }}>
+    <>
+      <div className="hero min-h-screen bg-gradient-to-br from-purple-300 to-indigo-900">
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="max-w-md">
@@ -24,6 +20,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 }

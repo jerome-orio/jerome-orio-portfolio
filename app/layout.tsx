@@ -16,9 +16,19 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Jerome Orio",
-  description: "Jerome Orio personal portfolio.",
+  title: "Jerome Orio - Software Developer Portfolio",
+  description: "Welcome to my personal portfolio. I am a software developer skilled in JavaScript, React, and Node.js. Explore my projects and get to know my work.",
   icons: [{ rel: 'icon', url: Favicon.src }],
+  keywords: ["Jerome Orio", "Software Developer", "Portfolio", "JavaScript", "React", "Next.js", "Web Development"],
+  authors: [{ name: "Jerome Orio", url: "https://jerome-orio-portfolio.vercel.app/" }],
+  openGraph: {
+    title: "Jerome Orio - Software Developer Portfolio",
+    description: "Welcome to my personal portfolio. I am a software developer skilled in JavaScript, React, and Node.js. Explore my projects and get to know my work.",
+    type: "website",
+    url: "https://jerome-orio-portfolio.vercel.app/",
+    locale: "en_US",
+    siteName: "JeromeOrio"
+  }
 };
 
 export default function RootLayout({
@@ -32,7 +42,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <TopNav />
-        {children}
+        <main className="relative mt-20">
+          {children}
+        </main>
       </body>
     </html>
   );
