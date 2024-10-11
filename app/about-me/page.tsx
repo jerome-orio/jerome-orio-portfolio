@@ -1,12 +1,12 @@
 import React from "react";
-import ProfilePicture from "../components/ProfilePicture";
+import ProfilePicture from '@/components/ProfilePicture'
 import Link from "next/link";
 
 const AboutMePage = () => {
     return (
         <>
-            <div className="bg-gray-100">
-                <div className="container mx-auto py-6">
+            <div className="hero min-h-screen bg-gradient-to-br from-purple-300 to-indigo-900">
+                <div className="hero-overlay container mx-auto py-6 bg-opacity-45">
                     <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
                         <div className="card col-span-4 sm:col-span-3">
                             <div className="card-body bg-base-100 shadow rounded-lg p-6">
@@ -33,7 +33,7 @@ const AboutMePage = () => {
                                     <div className="badge badge-secondary p-3 m-1">HTML/CSS</div>
                                     <div className="badge badge-neutral p-3 m-1">Next.js</div>
                                     <div className="badge badge-error p-3 m-1">Tailwind CSS</div>
-                                    <div className="badge badge-primary p-3 m-1">Typescript</div>
+                                    <div className="badge badge-primary p-3 m-1">TypeScript</div>
                                     <div className="badge badge-accent badge-outline p-3 m-1">Java</div>
                                     <div className="badge badge-warning p-3 m-1">Angular</div>
                                     <div className="badge badge-primary badge-outline p-3 m-1">Svelte</div>

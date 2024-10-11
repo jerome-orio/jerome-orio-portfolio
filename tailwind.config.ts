@@ -17,8 +17,8 @@ const config: Config = {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ['synthwave', 'winter']
+    themes: ['dracula', 'winter']
   },
-  darkMode: ['class', '[data-theme="synthwave"]']
+  darkMode: ['class', '[data-theme="dracula"]']
 };
 export default config;

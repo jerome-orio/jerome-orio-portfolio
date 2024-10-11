@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image"
-import profileImg from '../images/profile.jpg'
+import profileImg from '@/images/profile.jpg'
 
 /* interface Props {
     className: string;

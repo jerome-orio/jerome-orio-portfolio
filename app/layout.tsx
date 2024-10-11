@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Favicon from './favicon.ico';
-import TopNav from "./components/TopNav";
+import Favicon from "./favicon.ico";
+import TopNav from "@/components/TopNav";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   icons: [{ rel: 'icon', url: Favicon.src }],
   authors: [{ name: "Jerome Orio", url: "https://jerome-orio-portfolio.vercel.app/" }],
   openGraph: {
-    title: "Jerome Orio | Expert Software Developer Portfolio",
+    title: "Jerome Orio | Software Developer Portfolio",
     description: "I’m Jerome Orio, a software developer skilled in JavaScript, React, Angular, Svelte, TypeScript, Node.js, Java, Oracle, and NoSQL. Explore my projects!",
     type: "website",
     url: "https://jerome-orio-portfolio.vercel.app/",
@@ -58,8 +59,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Toaster position="top-center" />
         <TopNav />
-        <main className="relative mt-20">
+        <main className="relative mt-20 items-baseline">
           {children}
         </main>
       </body>

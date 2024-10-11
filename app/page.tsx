@@ -1,13 +1,14 @@
+import React from "react";
 import Link from "next/link";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
-      <div className="hero min-h-screen bg-gradient-to-br from-purple-300 to-indigo-900">
-        <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero min-h-screen bg-gradient-to-br from-purple-300 to-indigo-900 -mt-20">
+        <div className="hero-overlay bg-opacity-45"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Welcome!</h1>
+            <h1 className="mb-5 text-4xl font-bold">Welcome!</h1>
             <p className="mb-5">
               I’m Jerome Orio, a software developer passionate about creating innovative solutions. This portfolio highlights my journey through coding, problem-solving, and collaboration.
               Feel free to explore my projects, and don’t hesitate to reach out if you’d like to connect!
@@ -25,3 +26,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;
