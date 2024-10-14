@@ -61,7 +61,7 @@ export default function RootLayout({
       >
         <Toaster position="top-center" />
         <TopNav />
-        <main className="relative mt-20 items-baseline">
+        <main className="relative mt-20 items-baseline min-w-fit">
           {children}
         </main>
       </body>
