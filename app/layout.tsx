@@ -61,7 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`} >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen animate-blurIn`} >
         {/* <!-- Toaster Message --> */}
         <Toaster position='top-center' />
 
@@ -70,7 +70,7 @@ export default function RootLayout({
 
         {/* <!-- Main Content --> */}
         <main className='container mx-auto p-0 min-h-[calc(100vh-76px)] flex'>
-          <div className='hero min-h-min bg-gradient-to-br from-neutral to-secondary-content animate-zoomIn'>
+          <div className='hero min-h-min bg-gradient-to-br from-neutral to-secondary-content'>
             {children}
           </div>
         </main>

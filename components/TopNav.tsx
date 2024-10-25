@@ -5,7 +5,7 @@ import DesktopNav from './DesktopNav'
 
 const TopNav = () => {
     return (
-        <header className="shadow-md shadow-base-100 sticky top-0 z-40 animate-slideInFromTop">
+        <header className="shadow-md shadow-base-100 sticky top-0 z-40">
             <div className="navbar bg-secondary-content bg-opacity-95">
                 <div className="navbar-start">
                     <MobileNav />

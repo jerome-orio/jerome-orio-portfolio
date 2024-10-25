@@ -2,22 +2,25 @@ import React from "react";
 import Link from "next/link";
 import Socials from "@/components/Socials";
 import ProfilePicture from '@/components/ProfilePicture';
+import SequentialTextAnimation from '@/components/SequentialTextAnimation';
 
 const Home = () => {
   return (
     <>
       <div className="hero-content text-neutral-content text-center animate-fadeIn">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="relative flex items-center justify-center p-4 m-4 2xl:order-2 xl:order-2 lg:order-2 md:order-1 sm:order-1">
-            <svg className="absolute animate-circular" width="400" height="400">
-              <circle cx="200" cy="200" r="170" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="5, 55, 15" className='stroke-info animate-circularDash1' />
-              <circle cx="200" cy="200" r="170" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="10, 50" className="stroke-info animate-circularDash2" />
+          <div className="relative flex items-center justify-center lg:order-2 sm:order-1">
+            <svg className="absolute animate-circular" width="380" height="380">
+              <circle cx="190" cy="190" r="161.5" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="4.75, 52.25, 14.25" className='stroke-info animate-circularDash1' />
+              <circle cx="190" cy="190" r="161.5" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="9.5, 47.5" className="stroke-info animate-circularDash2" />
             </svg>
-            <ProfilePicture width={325} height={325} className="relative rounded-full backdrop-filter backdrop-blur-md opacity-75" alt="Jerome Orio Profile Picture" />
+            <ProfilePicture width={304} height={304} className="relative rounded-full backdrop-filter backdrop-blur-md opacity-75" alt="Jerome Orio Profile Picture" />
           </div>
           <div className="max-w-md p-4 m-4 2xl:order-1 xl:order-1 lg:order-1 md:order-2 sm:order-2">
             <h1 className="text-4xl font-bold">Hello! I’m </h1>
-            <h1 className="m-4 text-5xl font-extrabold text-info dark:text-error" >Jerome Orio</h1>
+            <h1 className="m-4 text-5xl font-extrabold text-info dark:text-error">
+              <SequentialTextAnimation text="Jerome Orio" />
+            </h1>
             <p className="mb-8">A software developer passionate about creating innovative solutions. This portfolio highlights my journey through coding, problem-solving, and collaboration.
               Feel free to explore my projects, and don’t hesitate to reach out if you’d like to connect!
             </p>

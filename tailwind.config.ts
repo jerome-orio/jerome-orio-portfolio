@@ -21,7 +21,8 @@ const config: Config = {
         circularDash2: "dashAnimation 3s linear infinite alternate 2s",
         zoomIn: "zoomIn 1s ease-in forwards",
         zoomOut: "zoomOut 1s ease-out forwards",
-        colorChange: "colorChange 15s infinite",
+        blurIn: "blurIn 1s linear",
+        flyInBottom: "flyInBottom 1s ease forwards",
       },
       keyframes: {
         fadeIn: {
@@ -88,21 +89,31 @@ const config: Config = {
             opacity: "0"
           }
         },
-        colorChange: {
-          "0%": { color: "red" },
-          "25%": { color: "blue" },
-          "50%": { color: "green" },
-          "75%": { color: "orange" },
-          "100%": { color: "purple" },
+        blurIn: {
+          "from": {
+            transform: "scaleX(0.2)",
+            filter: "blur(20px)",
+            opacity: "0",
+          }
+        },
+        flyInBottom: {
+          "0%": { transform: "translate(0px, 80px)", opacity: "0" },
+          "50%": { transform: "translate(10px, -50px)", animationTimingFunction: "ease-in-out" },
+          "100%": { transform: "translate(0)", opacity: "1" },
         },
       }
     },
   },
+  safelist: [
+    'animate-blurIn',
+    'animate-flyInBottom', // Add expected animation names here
+    // Add other dynamic animation names you plan to use
+  ],
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require('daisyui')],
   daisyui: {
     themes: ['dracula', 'bumblebee']
   },
-  darkMode: ['class', '[data-theme="dracula"]']
+  darkMode: ['class', '[data-theme="dracula"]'],
 };
 export default config;
