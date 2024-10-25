@@ -9,14 +9,14 @@ const Home = () => {
     <>
       <div className="hero-content text-neutral-content text-center animate-fadeIn">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="relative flex items-center justify-center lg:order-2 sm:order-1">
+          <div className="relative flex my-4 items-center justify-center lg:order-2 sm:order-1">
             <svg className="absolute animate-circular" width="380" height="380">
               <circle cx="190" cy="190" r="161.5" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="4.75, 52.25, 14.25" className='stroke-info animate-circularDash1' />
               <circle cx="190" cy="190" r="161.5" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="9.5, 47.5" className="stroke-info animate-circularDash2" />
             </svg>
             <ProfilePicture width={304} height={304} className="relative rounded-full backdrop-filter backdrop-blur-md opacity-75" alt="Jerome Orio Profile Picture" />
           </div>
-          <div className="max-w-md p-4 m-4 2xl:order-1 xl:order-1 lg:order-1 md:order-2 sm:order-2">
+          <div className="max-w-md py-4 my-4 lg:order-1 sm:order-2">
             <h1 className="text-4xl font-bold">Hello! I’m </h1>
             <h1 className="m-4 text-5xl font-extrabold text-info dark:text-error">
               <SequentialTextAnimation text="Jerome Orio" />

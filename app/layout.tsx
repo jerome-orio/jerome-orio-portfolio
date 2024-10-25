@@ -1,9 +1,15 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { Montserrat } from 'next/font/google';
 import './globals.css';
 import Favicon from './favicon.ico';
 import TopNav from '@/components/TopNav';
 import { Toaster } from 'react-hot-toast';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -61,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen animate-blurIn`} >
+      <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} antialiased min-h-screen !scroll-smooth animate-blurIn`} >
         {/* <!-- Toaster Message --> */}
         <Toaster position='top-center' />
 
