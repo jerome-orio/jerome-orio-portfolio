@@ -16,8 +16,8 @@ const page = {
 const AboutMe = () => {
   return (
     <div className="animate-fadeIn">
-      <h2 className="text-2xl text-info font-extrabold">{page.label}</h2>
-      <p className="text-base-content my-2 whitespace-pre-line">{page.desc}</p>
+      <h2 className="text-2xl text-info font-extrabold">{page?.label}</h2>
+      <p className="text-base-content my-2 whitespace-pre-line">{page?.desc}</p>
 
       <div className="grid grid-cols-1 gap-2">
         <div className='flex flex-col bg-base-200 rounded-box py-6 px-5 mt-4'>
@@ -47,16 +47,16 @@ const AboutMe = () => {
             return (
               <div key={index} className="flex flex-col bg-base-200 rounded-box py-6 px-5 mt-4">
                 <p className="text-primary text-xl font-bold mb-2">
-                  {item.year}
+                  {item?.year}
                 </p>
                 <p className="text-base-content font-bold">
-                  {item.title}
+                  {item?.title}
                 </p>
-                {item.desc && <p className="text-slate-500 text-sm mt-0">
-                  <i>{item.desc}</i>
+                {item?.desc && <p className="text-slate-500 text-sm mt-0">
+                  <i>{item?.desc}</i>
                 </p>}
                 <p className="text-slate-500 text-sm">
-                  {item.issuer}
+                  {item?.issuer}
                 </p>
               </div>
             )
