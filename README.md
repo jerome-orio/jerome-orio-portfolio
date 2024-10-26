@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Jerome Orio Portfolio
 
-First, run the development server:
+Welcome to my portfolio site! This is a showcase of my work and skills as a software developer.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Live Demo](https://jerome-orio-portfolio.vercel.app/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js] - is a React framework for building full-stack web applications. 
+- [React.js] - is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript.
+- [Typescript] - is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+- [React-Hook-Form] - Performant, flexible and extensible forms with easy-to-use validation.
+- [Zod] - TypeScript-first schema validation with static type inference
+- [React-Hot-Toast] - Add beautiful notifications to your React app.
+- [React-Icons] - Include popular icons in your React projects.
+- [Tailwind-CSS] - A utility-first CSS framework for building custom user interfaces.
+- [daisyUI] - a Tailwind CSS component library.
+- [Nodemailer] - is a module for Node.js applications that allows easy email sending.
 
-## Learn More
+## Contact
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Email: [jrorio.dev@zohomail.com](mailto:jrorio.dev@zohomail.com)
+- LinkedIn: [Jerome Orio](https://www.linkedin.com/in/jerome-orio-dev)

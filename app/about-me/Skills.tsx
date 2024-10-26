@@ -7,7 +7,7 @@ const skills = [
   { id: 'skill3', label: 'React', icon: <FaReact /> },
   { id: 'skill4', label: 'CSS3', icon: <FaCss3 /> },
   { id: 'skill5', label: 'Node.js', icon: <FaNodeJs /> },
-  { id: 'skill6', label: 'Typescript', icon: <SiTypescript /> },
+  { id: 'skill6', label: 'TypeScript', icon: <SiTypescript /> },
   { id: 'skill7', label: 'Java', icon: <FaJava /> },
   { id: 'skill8', label: 'Angular.js', icon: <FaAngular /> },
   { id: 'skill9', label: 'Svelte', icon: <SiSvelte /> },

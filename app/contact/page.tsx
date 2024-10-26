@@ -25,7 +25,7 @@ const Contact = () => {
                 </div>
                 <div className="flex">
                   <h1 className="ml-2 text-lg md:text-xl text-base-content whitespace-normal break-words">
-                    jrorio.dev@zohomail.com
+                    <Link className='link link-hover' href="mailto:jrorio.dev@zohomail.com">jrorio.dev@zohomail.com</Link>
                   </h1>
                 </div>
               </div>
