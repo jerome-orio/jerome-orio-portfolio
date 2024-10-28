@@ -1,5 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
+import Loading from '@/components/Loading';
 
 type Tab = {
   id: string;
@@ -29,7 +30,9 @@ const VerticalTabs = ({ tabs }: VerticalTabsProps) => {
         <div className="card-body bg-base-300 shadow rounded-lg p-6">
           {tabs.map((tab) => (
             <div key={tab.id} style={{ display: activeTab === tab.id ? 'block' : 'none' }}>
-              {tab.content} {/* Render the tab content directly */}
+              <Suspense fallback={<Loading />}>
+                {tab.content} {/* Render the tab content directly */}
+              </Suspense>
             </div>
           ))}
         </div>

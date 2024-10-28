@@ -5,6 +5,9 @@ import './globals.css';
 import Favicon from './favicon.ico';
 import TopNav from '@/components/TopNav';
 import { Toaster } from 'react-hot-toast';
+import { Suspense } from 'react';
+import Loading from '@/components/Loading';
+import { Analytics } from '@vercel/analytics/react';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -77,9 +80,12 @@ export default function RootLayout({
         {/* <!-- Main Content --> */}
         <main className='container mx-auto p-0 min-h-[calc(100vh-76px)] flex'>
           <div className='hero min-h-min bg-gradient-to-br from-neutral to-secondary-content'>
-            {children}
+            <Suspense fallback={<Loading />}>
+              {children}
+            </Suspense>
           </div>
         </main>
+        <Analytics />
       </body>
     </html>
   );
