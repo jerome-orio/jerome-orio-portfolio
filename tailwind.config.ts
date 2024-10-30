@@ -17,8 +17,8 @@ const config: Config = {
         slideIn: "slideIn .8s ease-in forwards",
         slideInFromTop: "slideInFromTop .8s ease-in forwards",
         circular: "circular 15s linear infinite alternate",
-        circularDash1: "dashAnimation 5s ease-in-out forwards infinite alternate 3s",
-        circularDash2: "dashAnimation 5s ease-in-out forwards infinite alternate 5s",
+        circularDash1: "dashAnimation 5s ease-in-out forwards 3s",
+        circularDash2: "dashAnimation 10s ease-in-out forwards infinite 5s",
         zoomIn: "zoomIn 1s ease-in forwards",
         zoomOut: "zoomOut 1s ease-out forwards",
         blurIn: "blurIn 1s forwards",
@@ -66,10 +66,10 @@ const config: Config = {
             "stroke-dashoffset": "00",
           },
           "50%": {
-            "stroke-dashoffset": "-100",
+            "stroke-dashoffset": "-20",
           },
           "100%": {
-            "stroke-dashoffset": "-200",
+            "stroke-dashoffset": "-70",
           }
         },
         zoomIn: {
