@@ -12,16 +12,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      willChange: {
-        "stroke-dashoffset": "stroke-dashoffset",
-      },
       animation: {
         fadeIn: "fadeIn 1s ease-in forwards",
         slideIn: "slideIn .8s ease-in forwards",
         slideInFromTop: "slideInFromTop .8s ease-in forwards",
-        circular: "circular 15s infinite alternate",
-        circularDash1: "dashAnimation 5s forwards infinite alternate 1s",
-        circularDash2: "dashAnimation 5s forwards infinite alternate 2s",
+        circular: "circular 15s linear infinite alternate",
+        circularDash1: "dashAnimation 5s ease-in-out forwards infinite alternate 3s",
+        circularDash2: "dashAnimation 5s ease-in-out forwards infinite alternate 5s",
         zoomIn: "zoomIn 1s ease-in forwards",
         zoomOut: "zoomOut 1s ease-out forwards",
         blurIn: "blurIn 1s forwards",
@@ -65,11 +62,14 @@ const config: Config = {
           }
         },
         dashAnimation: {
-          "from": {
-            "stroke-dashoffset": "0",
+          "0%": {
+            "stroke-dashoffset": "00",
           },
-          "to": {
+          "50%": {
             "stroke-dashoffset": "-100",
+          },
+          "100%": {
+            "stroke-dashoffset": "-200",
           }
         },
         zoomIn: {

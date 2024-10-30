@@ -11,8 +11,8 @@ const Home = () => {
           <div className="relative flex my-4 items-center justify-center lg:order-2 sm:order-1">
             <div className="absolute w-full h-full flex items-center justify-center">
               <svg className="w-60 h-60 sm:w-64 sm:h-64 md:w-[380px] md:h-[380px] animate-circular will-change-transform" viewBox="0 0 380 380" >
-                <circle cx="190" cy="190" r="160" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="50, 5, 15" className="stroke-info animate-circularDash1" />
-                <circle cx="190" cy="190" r="160" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="5, 50" className="stroke-info animate-circularDash2" />
+                <circle cx="190" cy="190" r="160" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="50, 5, 25" className="stroke-info animate-circularDash1" />
+                <circle cx="190" cy="190" r="160" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="10, 50" className="stroke-info animate-circularDash2" />
               </svg>
             </div>
             <ProfilePicture width={304} height={304} className="relative rounded-full backdrop-filter backdrop-blur-md opacity-75 w-48 h-48 sm:w-60 sm:h-60 md:w-[304px] md:h-[304px]" />
