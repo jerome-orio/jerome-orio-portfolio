@@ -9,11 +9,13 @@ const Home = () => {
       <div className="hero-content text-neutral-content text-center animate-fadeIn">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="relative flex my-4 items-center justify-center lg:order-2 sm:order-1">
-            <svg className="absolute animate-circular will-change-transform" width="380" height="380">
-              <circle cx="190" cy="190" r="160" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="50, 5, 15" className="stroke-info animate-circularDash1 will-change-stroke-dashoffset" />
-              <circle cx="190" cy="190" r="160" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="5, 50" className="stroke-info animate-circularDash2 will-change-stroke-dashoffset" />
-            </svg>
-            <ProfilePicture width={304} height={304} className="relative rounded-full backdrop-filter backdrop-blur-md opacity-75" />
+            <div className="absolute w-full h-full flex items-center justify-center">
+              <svg className="w-60 h-60 sm:w-64 sm:h-64 md:w-[380px] md:h-[380px] animate-circular will-change-transform" viewBox="0 0 380 380" >
+                <circle cx="190" cy="190" r="160" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="50, 5, 15" className="stroke-info animate-circularDash1 will-change-stroke-dashoffset" />
+                <circle cx="190" cy="190" r="160" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="5, 50" className="stroke-info animate-circularDash2 will-change-stroke-dashoffset" />
+              </svg>
+            </div>
+            <ProfilePicture width={304} height={304} className="relative rounded-full backdrop-filter backdrop-blur-md opacity-75 w-48 h-48 sm:w-60 sm:h-60 md:w-[304px] md:h-[304px]" />
           </div>
           <div className="max-w-md py-4 my-4 lg:order-1 sm:order-2">
             <h1 className="text-4xl font-bold">Hello! I’m </h1>
