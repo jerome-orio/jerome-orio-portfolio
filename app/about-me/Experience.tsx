@@ -78,7 +78,7 @@ const Experience = () => {
         {
           experience.map((item, index) => {
             return (
-              <div key={index} className="flex flex-col bg-base-200 rounded-box py-6 px-5 mt-4">
+              <div key={index} className="flex flex-col bg-base-200 rounded-box py-6 px-5 mt-4 animate-fadeIn">
                 <p className="text-primary text-xl font-bold mb-2">
                   {item?.position} @ <Link className="link link-hover" href={item?.companyLink} target="_blank">{item?.companyName}</Link>
                 </p>

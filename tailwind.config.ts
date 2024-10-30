@@ -12,16 +12,19 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      willChange: {
+        "stroke-dashoffset": "stroke-dashoffset",
+      },
       animation: {
         fadeIn: "fadeIn 1s ease-in forwards",
         slideIn: "slideIn .8s ease-in forwards",
         slideInFromTop: "slideInFromTop .8s ease-in forwards",
-        circular: "circular 15s linear infinite alternate",
-        circularDash1: "dashAnimation 5s linear infinite alternate 1s",
-        circularDash2: "dashAnimation 5s linear infinite alternate 3s",
+        circular: "circular 15s ease-in-out infinite alternate",
+        circularDash1: "dashAnimation 5s ease-in infinite alternate 1s",
+        circularDash2: "dashAnimation 5s ease-in infinite alternate 2s",
         zoomIn: "zoomIn 1s ease-in forwards",
         zoomOut: "zoomOut 1s ease-out forwards",
-        blurIn: "blurIn 1s linear",
+        blurIn: "blurIn 1s forwards",
         flyInBottom: "flyInBottom 1s ease forwards",
       },
       keyframes: {
@@ -94,6 +97,9 @@ const config: Config = {
             transform: "scaleX(0.2)",
             filter: "blur(20px)",
             opacity: "0",
+          },
+          "to": {
+            opacity: "1",
           }
         },
         flyInBottom: {

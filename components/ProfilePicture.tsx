@@ -4,14 +4,14 @@ import profileImg from '@/images/profile-clear-bg-webp.webp'
 
 interface Props {
     className: string;
-    alt: string;
-    width: number;
-    height: number;
+    alt?: string;
+    width?: number;
+    height?: number;
 }
 
-const ProfilePicture = ({ className, alt, width, height }: Props) => {
+const ProfilePicture = ({ className, alt = "Jerome Orio Profile Picture", width = 200, height = 200 }: Props) => {
     return (
-        <div><Image width={width || 200} height={height || 200} alt={alt || "Jerome Orio Profile Picture"} src={profileImg} className={className} /></div>
+        <div><Image width={width} height={height} alt={alt} src={profileImg} className={className} /></div>
     )
 }
 

@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import Socials from "@/components/Socials";
 import ProfilePicture from '@/components/ProfilePicture';
@@ -10,15 +9,15 @@ const Home = () => {
       <div className="hero-content text-neutral-content text-center animate-fadeIn">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="relative flex my-4 items-center justify-center lg:order-2 sm:order-1">
-            <svg className="absolute animate-circular" width="380" height="380">
-              <circle cx="190" cy="190" r="161.5" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="4.75, 52.25, 14.25" className='stroke-info animate-circularDash1' />
-              <circle cx="190" cy="190" r="161.5" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="9.5, 47.5" className="stroke-info animate-circularDash2" />
+            <svg className="absolute animate-circular will-change-transform" width="380" height="380">
+              <circle cx="190" cy="190" r="160" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="50, 5, 15" className="stroke-info animate-circularDash1 will-change-stroke-dashoffset" />
+              <circle cx="190" cy="190" r="160" fill="none" strokeWidth="4" stroke="#3498db" strokeDasharray="5, 50" className="stroke-info animate-circularDash2 will-change-stroke-dashoffset" />
             </svg>
-            <ProfilePicture width={304} height={304} className="relative rounded-full backdrop-filter backdrop-blur-md opacity-75" alt="Jerome Orio Profile Picture" />
+            <ProfilePicture width={304} height={304} className="relative rounded-full backdrop-filter backdrop-blur-md opacity-75" />
           </div>
           <div className="max-w-md py-4 my-4 lg:order-1 sm:order-2">
             <h1 className="text-4xl font-bold">Hello! I’m </h1>
-            <h1 className="m-4 text-5xl font-extrabold text-info dark:text-error">
+            <h1 className="m-4 text-5xl font-extrabold text-info">
               <SequentialTextAnimation text="Jerome Orio" />
             </h1>
             <p className="mb-8">A software developer passionate about creating innovative solutions. This portfolio highlights my journey through coding, problem-solving, and collaboration.
