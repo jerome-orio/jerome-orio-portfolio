@@ -85,6 +85,8 @@ export default function RootLayout({
             </Suspense>
           </div>
         </main>
+
+        {/* <!-- Vercel Analytics --> */}
         <Analytics />
       </body>
     </html>
