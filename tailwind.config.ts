@@ -18,7 +18,7 @@ const config: Config = {
         slideInFromTop: "slideInFromTop .8s ease-in forwards",
         circular: "circular 15s linear infinite alternate",
         circularDash1: "dashAnimation 5s ease-in-out forwards 3s",
-        circularDash2: "dashAnimation 10s ease-in-out forwards infinite 5s",
+        circularDash2: "dashAnimation 10s ease-in-out forwards infinite 6s",
         zoomIn: "zoomIn 1s ease-in forwards",
         zoomOut: "zoomOut 1s ease-out forwards",
         blurIn: "blurIn 1s forwards",
