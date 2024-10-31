@@ -12,6 +12,10 @@ const MobileNav = () => {
 
     const toggleDropdown = () => setIsOpen(prev => !prev);
 
+    const handleLinkClick = () => {
+        setIsOpen(false);
+    };
+
     return (
         <div className="dropdown">
             <div
@@ -30,7 +34,7 @@ const MobileNav = () => {
                             <Link
                                 href={link.path}
                                 className={`text-xl font-bold duration-300 ${currentPath === link.path ? 'text-info font-extrabold' : 'text-base-content'}`}
-                                onClick={() => setIsOpen(false)}
+                                onClick={handleLinkClick} 
                             >
                                 {link.icon} {link.name}
                             </Link>
