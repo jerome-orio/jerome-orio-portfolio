@@ -34,6 +34,7 @@ This portfolio is designed to highlight my journey in software development, feat
 * **daisyUI**: a Tailwind CSS component library.
 * **Nodemailer**: is a module for Node.js applications that allows easy email sending.
 * **Jest**: testing framework for unit and integration testing.
+* **React Testing Library**: For testing React components.
 
 ## Installation
 To set up the project locally, follow these steps:

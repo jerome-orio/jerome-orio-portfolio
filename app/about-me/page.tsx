@@ -1,5 +1,5 @@
 
-import VerticalTabss from '@/components/VerticalTabs';
+import VerticalTabs from '@/components/VerticalTabs';
 import AboutMe from '@/app/about-me/AboutMe';
 import Experience from '@/app/about-me/Experience';
 import Skills from '@/app/about-me/Skills';
@@ -20,12 +20,10 @@ const tabs: Tabs[] = [
 
 const AboutMePage = () => {
   return (
-    <>
-      <div className="hero-overlay container mx-auto p-4 md:px-20 md:py-10 bg-opacity-45 animate-fadeIn">
-        <VerticalTabss tabs={tabs} />
-      </div>
-    </>
-    );
+    <div className="hero-overlay container mx-auto p-4 md:px-20 md:py-10 bg-opacity-45 animate-fadeIn">
+      <VerticalTabs tabs={tabs} />
+    </div>
+  );
 };
 
 export default AboutMePage;

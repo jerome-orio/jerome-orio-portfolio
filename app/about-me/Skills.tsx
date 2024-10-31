@@ -24,23 +24,26 @@ const page = {
 const Skills = () => {
   return (
     <div className="animate-fadeIn">
-      <h2 className="text-2xl text-info font-extrabold">{page?.label}</h2>
-      <p className="text-base-content my-2 whitespace-pre-line">{page?.desc}</p>
+      <h2 className="text-2xl text-info font-extrabold">{page.label}</h2>
+      <p className="text-base-content my-2 whitespace-pre-line">{page.desc}</p>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
         {
-          skills?.map((skill, index) => {
-            return (
-              <div key={index} className="flex flex-col bg-base-200 rounded-box py-6 px-5 mt-4">
-                <div className="tooltip hover:tooltip-open tooltip-top" data-tip={skill?.label}>
-                  <button className="text-6xl text-base-content duration-300 hover:text-info hover:scale-105" >{skill?.icon}</button>
-                </div>
+          skills.map(skill => (
+            <div key={skill.id} className="flex flex-col bg-base-200 rounded-box py-6 px-5 mt-4 transition-transform duration-200 hover:scale-105">
+              <div className="tooltip hover:tooltip-open tooltip-top" data-tip={skill.label}>
+                <button
+                  aria-label={`Skill: ${skill.label}`}
+                  className="text-6xl text-base-content duration-300 hover:text-info"
+                >
+                  {skill.icon}
+                </button>
               </div>
-            )
-          })
+            </div>
+          ))
         }
       </div>
     </div>
-  )
+  );
 };
 
 export default Skills;

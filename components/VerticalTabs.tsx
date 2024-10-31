@@ -20,19 +20,33 @@ const VerticalTabs = ({ tabs }: VerticalTabsProps) => {
       {/* Tab List */}
       <div role="tablist" className="card col-span-4 sm:col-span-4 items-center gap-4">
         {tabs.map((tab) => (
-          <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`btn btn-block btn-outline btn-info bg-base-300 ${activeTab === tab.id ? 'font-bold btn-active' : ''}`} >
+          <button
+            key={tab.id}
+            role="tab"
+            aria-selected={activeTab === tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`btn btn-block btn-outline btn-info bg-base-300 ${activeTab === tab.id ? 'font-bold btn-active' : ''}`}
+            tabIndex={0}
+          >
             {tab.label}
           </button>
         ))}
       </div>
+
       {/* Tab Content */}
-      <div className="card col-span-4 sm:col-span-8" >
+      <div className="card col-span-4 sm:col-span-8">
         <div className="card-body bg-base-300 shadow rounded-lg p-6">
           {tabs.map((tab) => (
-            <div key={tab.id} style={{ display: activeTab === tab.id ? 'block' : 'none' }}>
-              <Suspense fallback={<Loading />}>
-                {tab.content} {/* Render the tab content directly */}
-              </Suspense>
+            <div
+              key={tab.id}
+              role="tabpanel"
+              hidden={activeTab !== tab.id}
+            >
+              {activeTab === tab.id && (
+                <Suspense fallback={<Loading />}>
+                  {tab.content}
+                </Suspense>
+              )}
             </div>
           ))}
         </div>

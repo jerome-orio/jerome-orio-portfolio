@@ -22,6 +22,7 @@ const SequentialTextAnimation: React.FC<SequentialTextAnimationProps> = ({
           style={{
             animationDuration: `${duration}ms`,
             animationDelay: `${index * delayIncrement}ms`,
+            animationFillMode: 'forwards',
             opacity: 0,
           }}
         >

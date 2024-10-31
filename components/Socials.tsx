@@ -11,12 +11,17 @@ const socials: Social[] = [
     { icon: <FaLinkedinIn />, path: 'https://www.linkedin.com/in/jerome-orio-dev' },
 ];
 
-const Socials = ({ divClassName, iconClassName }: { divClassName: string, iconClassName: string }) => {
+interface SocialsProps {
+    divClassName: string;
+    iconClassName: string;
+}
+
+const Socials = ({ divClassName, iconClassName }: SocialsProps) => {
     return (
         <div className={divClassName}>
             {socials.map((social, index) => {
                 return (
-                    <Link key={index} href={social.path} className={iconClassName} target="_blank" rel="noopener noreferrer">{social.icon}</Link>
+                    <Link key={index} href={social.path} className={iconClassName} target="_blank" rel="noopener noreferrer" aria-label={`Link to ${social.path}`}>{social.icon}</Link>
                 )
             })}
         </div>

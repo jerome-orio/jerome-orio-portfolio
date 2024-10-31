@@ -1,8 +1,8 @@
 'use server';
-import { sendMail } from "@/lib/send-email";
+import { sendEmail } from "@/lib/send-email";
 import { formSchema } from "./types";
 
-export async function sendEmail(formData: { message: string; name: string; email: string; }) {
+export async function submitForm(formData: { message: string; name: string; email: string; }) {
     try {
         const result = formSchema.safeParse(formData);
 
@@ -11,7 +11,7 @@ export async function sendEmail(formData: { message: string; name: string; email
             const email = formData.email;
             const message = formData.message;
             const mailText = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
-            const response = await sendMail({
+            const response = await sendEmail({
                 //email: values.email,
                 subject: 'New Contact Us Form',
                 text: mailText,
