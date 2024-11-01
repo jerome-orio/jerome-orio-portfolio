@@ -1,5 +1,5 @@
 
-import VerticalTabs from '@/components/VerticalTabs';
+import VerticalTabs from '@/components/nav/VerticalTabs';
 import AboutMe from '@/app/about-me/AboutMe';
 import Experience from '@/app/about-me/Experience';
 import Skills from '@/app/about-me/Skills';

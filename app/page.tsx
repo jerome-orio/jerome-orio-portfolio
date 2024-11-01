@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Socials from "@/components/Socials";
-import ProfilePicture from '@/components/ProfilePicture';
-import SequentialTextAnimation from '@/components/SequentialTextAnimation';
+import Socials from "@/components/nav/Socials";
+import ProfilePicture from '@/components/common/ProfilePicture';
+import SequentialTextAnimation from '@/components/animation/SequentialTextAnimation';
 
 const Home = () => {
   return (

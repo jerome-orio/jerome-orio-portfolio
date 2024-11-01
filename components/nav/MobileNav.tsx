@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { links } from './DesktopNav'
-import { FaAlignJustify, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 
 const MobileNav = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -29,7 +29,7 @@ const MobileNav = () => {
                 {isOpen ? (
                     <FaTimes className="w-6 h-6" />
                 ) : (
-                    <FaAlignJustify className="w-6 h-6" />
+                    <FaBars className="w-6 h-6" />
                 )}
             </button>
 

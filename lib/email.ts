@@ -46,3 +46,23 @@ export async function sendEmail({
     console.log('Mail sent to', env.SITE_MAIL_RECIEVER);
     return info;
 }
+
+export async function submitEmailForm(formData: { message: string; name: string; email: string; }) {
+    try {
+        const name = formData.name;
+        const email = formData.email;
+        const message = formData.message;
+        const mailText = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+        const response = await sendEmail({
+            //email: values.email,
+            subject: 'New Contact Us Form',
+            text: mailText,
+        });
+        if (response?.messageId) {
+            return { message: 'success' }
+        }
+    } catch (e) {
+        console.error('Error while trying to send email :', e);
+        return { message: 'failed' }
+    }
+}

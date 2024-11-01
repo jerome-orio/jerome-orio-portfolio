@@ -3,13 +3,13 @@ import { render, screen } from '@testing-library/react';
 import Home from '@/app/page';
 
 // Mock the components used in Home
-jest.mock('@/components/Socials', () => {
+jest.mock('@/components/nav/Socials', () => {
   const Socials = () => <div>Socials Component</div>;
   Socials.displayName = 'Socials';
   return Socials;
 });
 
-jest.mock('@/components/ProfilePicture', () => {
+jest.mock('@/components/common/ProfilePicture', () => {
   const ProfilePicture = (props: any) => (
     <div data-testid="profile-picture" {...props}>Profile Picture</div>
   );
@@ -17,7 +17,7 @@ jest.mock('@/components/ProfilePicture', () => {
   return ProfilePicture;
 });
 
-jest.mock('@/components/SequentialTextAnimation', () => {
+jest.mock('@/components/animation/SequentialTextAnimation', () => {
   const SequentialTextAnimation = (props: any) => (
     <div>{props.text}</div>
   );

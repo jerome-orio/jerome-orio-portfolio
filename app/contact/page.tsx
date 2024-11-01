@@ -1,4 +1,4 @@
-import Socials from '@/components/Socials';
+import Socials from '@/components/nav/Socials';
 import { Form } from "./Form";
 import { FaMapLocationDot, FaSquareEnvelope } from 'react-icons/fa6';
 import Link from 'next/link';

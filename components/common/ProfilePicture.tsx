@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image"
-import profileImg from '@/images/profile-clear-bg-webp.webp'
+import profileImg from '@/public/images/profile-clear-bg-webp.webp'
 
 interface Props {
     className?: string;

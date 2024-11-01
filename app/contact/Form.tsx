@@ -1,10 +1,14 @@
 'use client';
+
 import toast from "react-hot-toast";
-import { submitForm } from "./action";
+import { submitEmailForm } from '@/lib/email';
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FormError } from "@/components/FormError";
-import { FormFields, formSchema } from "./types";
+import { FormError } from "@/components/form/FormError";
+import { contactFormSchema } from "@/app/schema/formSchema";
+import { ContactFormFields } from '@/app/types/formTypes';
+import Captcha from '@/components/form/Captcha';
+import Alert from '@/components/common/Alert';
 
 export function Form() {
   const {
@@ -12,33 +16,35 @@ export function Form() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<FormFields>({ resolver: zodResolver(formSchema) });
+    setValue,
+    watch
+  } = useForm<ContactFormFields>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      captchaRefresh: Date.now()
+    }
+  });
 
-  const onSubmit: SubmitHandler<FormFields> = async (data) => {
-    const result = await submitForm(data);
+  const onSubmit: SubmitHandler<ContactFormFields> = async (data) => {
+    const result = await submitEmailForm(data);
 
     if (result?.message === 'success') {
       toast.custom(
-        <div role="alert" className="alert alert-success w-fit">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span>Message sent successfully.</span>
-        </div>
+        <Alert type={"success"} message={"Message sent successfully."} />
       );
       reset();
+      setValue('captchaRefresh', Date.now());
     } else {
       // Uncomment to set a global error message
       // setError("root", { message: "Something went wrong. Please try again." });
       toast.custom(
-        <div role="alert" className="alert alert-error w-fit">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span>Failed to send message. Please try again.</span>
-        </div>
+        <Alert type={"error"} message={"Failed to send message. Please try again."} />
       );
     }
+
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 300);
   }
 
   return (
@@ -66,6 +72,10 @@ export function Form() {
         {/* Message Textarea */}
         <textarea {...register('message')} id="message" className="textarea textarea-bordered textarea-primary text-base flex text-base-content" placeholder="Message"></textarea>
         {errors.message?.message && <FormError message={errors.message?.message} />}
+
+        {/* Captcha Component */}
+        <Captcha register={register} error={errors.captcha?.message} setValue={setValue} watch={watch} />
+
 
         {/* Submit Button */}
         <button

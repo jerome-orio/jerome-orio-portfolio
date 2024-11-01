@@ -3,10 +3,10 @@ import localFont from 'next/font/local';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
 import Favicon from './favicon.ico';
-import TopNav from '@/components/TopNav';
+import TopNav from '@/components/nav/TopNav';
 import { Toaster } from 'react-hot-toast';
 import { Suspense } from 'react';
-import Loading from '@/components/Loading';
+import Loading from '@/components/common/Loading';
 import { Analytics } from '@vercel/analytics/react';
 
 // Font Imports
