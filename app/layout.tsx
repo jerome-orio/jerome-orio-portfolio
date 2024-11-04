@@ -13,22 +13,29 @@ import { Analytics } from '@vercel/analytics/react';
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '700'],
+  display: 'swap',
+  variable: '--font-montserrat',
 });
 
 const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
+  src: './fonts/GeistVF.woff2',
   variable: '--font-geist-sans',
   weight: '100 900',
+  display: 'swap',
+  preload: true,
 });
 
 const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
+  src: './fonts/GeistMonoVF.woff2',
   variable: '--font-geist-mono',
   weight: '100 900',
+  display: 'swap',
+  preload: true,
 });
 
 // Metadata
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jerome-orio-portfolio.vercel.app/'),
   title: 'Jerome Orio | Software Developer Portfolio',
   description: 'I’m Jerome Orio, a software developer skilled in JavaScript, React, Angular, Svelte, TypeScript, Node.js, Java, Oracle, and NoSQL. Explore my projects!',
   keywords: [
@@ -37,7 +44,10 @@ export const metadata: Metadata = {
     'Web Development Portfolio', 'TypeScript Programmer', 'Node.js Developer',
     'Oracle Developer', 'NoSQL Database', 'Tailwind CSS', 'Software Engineer', 'Projects',
   ],
-  icons: [{ rel: 'icon', url: Favicon.src }],
+  icons: {
+    icon: [{ url: Favicon.src }],
+    apple: [{ url: Favicon.src }],
+  },
   authors: [{ name: 'Jerome Orio', url: 'https://jerome-orio-portfolio.vercel.app/' }],
   openGraph: {
     title: 'Jerome Orio | Software Developer Portfolio',
@@ -47,6 +57,10 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'JeromeOrio',
   },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -55,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} antialiased min-h-screen !scroll-smooth animate-blurIn`}>
         <Toaster position='top-center' />
         <TopNav />
-        <main className='container mx-auto p-0 min-h-[calc(100vh-76px)] flex'>
+        <main className='mx-auto p-0 min-h-[calc(100vh-76px)] flex'>
           <div className='hero min-h-min bg-gradient-to-br from-neutral to-secondary-content'>
             <Suspense fallback={<Loading />}>
               {children}

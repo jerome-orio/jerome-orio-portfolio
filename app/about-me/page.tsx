@@ -20,7 +20,7 @@ const tabs: Tabs[] = [
 
 const AboutMePage = () => {
   return (
-    <div className="hero-overlay container mx-auto p-4 md:px-20 md:py-10 bg-opacity-45 animate-fadeIn">
+    <div className="hero-overlay mx-auto p-4 md:px-20 md:py-10 bg-opacity-45 animate-fadeIn">
       <VerticalTabs tabs={tabs} />
     </div>
   );

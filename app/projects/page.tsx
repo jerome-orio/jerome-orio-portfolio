@@ -1,7 +1,7 @@
 
 const Projects = () => {
   return (
-    <div className="container mx-auto p-4 md:px-20 md:py-10 animate-fadeIn">
+    <div className="mx-auto p-4 md:px-20 md:py-10 animate-fadeIn">
       <h1 className="text-4xl font-bold text-center text-info mb-4">Projects</h1>
       <div className="text-center">
         <p className="text-base-content mb-8">

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Contact = () => {
   return (
-    <div className="hero-overlay container mx-auto p-4 md:px-20 md:py-10 bg-opacity-45 animate-fadeIn">
+    <div className="hero-overlay mx-auto p-4 md:px-20 md:py-10 bg-opacity-45 animate-fadeIn">
       <div className="grid grid-cols-4 sm:grid-cols-12 gap-4 px-4">
         {/* Message Form */}
         <div className="card col-span-4 sm:col-span-8">
