@@ -16,9 +16,9 @@ const config: Config = {
         fadeIn: "fadeIn 1s ease-in forwards",
         slideIn: "slideIn .8s ease-in forwards",
         slideInFromTop: "slideInFromTop .8s ease-in forwards",
-        circular: "circular 15s linear infinite alternate",
-        circularDash1: "dashAnimation 5s ease-in-out forwards 3s",
-        circularDash2: "dashAnimation 10s ease-in-out forwards infinite 6s",
+        circular: "circular 12s linear forwards infinite alternate",
+        circularDash1: "dashAnimation 8s ease-in-out forwards infinite",
+        circularDash2: "dashAnimation 12s ease-in-out forwards infinite",
         zoomIn: "zoomIn 1s ease-in forwards",
         zoomOut: "zoomOut 1s ease-out forwards",
         blurIn: "blurIn 1s forwards",
@@ -55,21 +55,24 @@ const config: Config = {
         },
         circular: {
           "from": {
-            transform: "rotate(0turn)",
+            transform: "rotate(0deg)",
           },
           "to": {
-            transform: "rotate(1turn)",
+            transform: "rotate(360deg)",
           }
         },
         dashAnimation: {
           "0%": {
-            "stroke-dashoffset": "00",
+            "stroke-dashoffset": "00", "stroke-width": "5"
           },
-          "50%": {
-            "stroke-dashoffset": "-20",
+          "48%": {
+            "stroke-dashoffset": "-40", "stroke-width": "6", "stroke-dasharray": "10 150 0"
+          },
+          "52%": {
+            "stroke-dashoffset": "-40", "stroke-width": "5",
           },
           "100%": {
-            "stroke-dashoffset": "-70",
+            "stroke-dashoffset": "00", "stroke-width": "5"
           }
         },
         zoomIn: {

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-     images: { domains: ['json-server.dev'] }, 
+     images: { domains: [''] },
 };
 
 export default nextConfig;
