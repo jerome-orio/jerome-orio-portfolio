@@ -4,6 +4,11 @@ import AboutMe from '@/app/about-me/AboutMe';
 import Experience from '@/app/about-me/Experience';
 import Skills from '@/app/about-me/Skills';
 import Education from '@/app/about-me/Education';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Me',
+};
 
 type Tabs = {
   id: string;

@@ -36,7 +36,10 @@ const geistMono = localFont({
 // Metadata
 export const metadata: Metadata = {
   metadataBase: new URL('https://jerome-orio-portfolio.vercel.app/'),
-  title: 'Jerome Orio | Software Developer Portfolio',
+  title: {
+    template: '%s | Jerome Orio | Software Developer Portfolio',
+    default: 'Home | Jerome Orio | Software Developer Portfolio',
+  },
   description: 'I’m Jerome Orio, a software developer skilled in JavaScript, React, Angular, Svelte, TypeScript, Node.js, Java, Oracle, and NoSQL. Explore my projects!',
   keywords: [
     'Jerome Orio', 'Software Developer', 'Portfolio', 'Java Developer', 'JavaScript Developer',

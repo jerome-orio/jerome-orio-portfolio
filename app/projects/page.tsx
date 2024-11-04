@@ -1,4 +1,10 @@
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Projects',
+};
+
 const Projects = () => {
   return (
     <div className="mx-auto p-4 md:px-20 md:py-10 animate-fadeIn">

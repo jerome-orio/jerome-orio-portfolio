@@ -2,6 +2,11 @@ import Socials from '@/components/nav/Socials';
 import { Form } from "./Form";
 import { FaMapLocationDot, FaSquareEnvelope } from 'react-icons/fa6';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+};
 
 const Contact = () => {
   return (
