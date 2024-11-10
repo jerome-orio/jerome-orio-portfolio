@@ -16,7 +16,7 @@ const Home = () => {
           <ProfilePicture width={304} height={304} className="relative rounded-full backdrop-filter backdrop-blur-md opacity-75 w-48 h-48 sm:w-60 sm:h-60 md:w-[304px] md:h-[304px]" />
         </div>
         <div className="max-w-md py-4 my-4 lg:order-1 sm:order-2">
-          <h1 className="text-4xl font-bold">Hello! I’m </h1>
+          <h2 className="text-4xl font-bold">Hello! I’m </h2>
           <h1 className="m-4 text-5xl font-extrabold text-info">
             <SequentialTextAnimation text="Jerome Orio" />
           </h1>
