@@ -1,21 +1,30 @@
 'use client';
 
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { links } from './DesktopNav'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { links } from './DesktopNav';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const MobileNav = () => {
     const [isOpen, setIsOpen] = useState(false)
     const pathname = usePathname()
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen)
+        setIsOpen(!isOpen);
+        scrollToTop();
     }
 
     const closeMenu = () => {
-        setIsOpen(false)
+        setIsOpen(false);
+        scrollToTop();
+    }
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
     }
 
     return (
@@ -52,26 +61,28 @@ const MobileNav = () => {
                 `}
                 aria-hidden={!isOpen}
             >
-                <ul className="space-y-4 pt-12">
-                    {links.map((link, index) => (
-                        <li key={index}>
-                            <Link
-                                href={link.path}
-                                onClick={closeMenu}
-                                className={`
-                                    flex items-center gap-3 text-xl font-bold 
-                                    text-base-content p-3 rounded-lg transition-colors
-                                    ${pathname === link.path
-                                        ? 'bg-info text-primary-content'
-                                        : 'hover:bg-base-200'}
-                                `}
-                            >
-                                <span className="text-2xl">{link.icon}</span>
-                                {link.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                {isOpen && (
+                    <ul className="space-y-4 pt-12">
+                        {links.map((link, index) => (
+                            <li key={index}>
+                                <Link
+                                    href={link.path}
+                                    onClick={closeMenu}
+                                    className={`
+                                        flex items-center gap-3 text-xl font-bold 
+                                        text-base-content p-3 rounded-lg transition-colors
+                                        ${pathname === link.path
+                                            ? 'bg-info text-primary-content'
+                                            : 'hover:bg-base-200'}
+                                    `}
+                                >
+                                    <span className="text-2xl">{link.icon}</span>
+                                    {link.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </nav>
         </div>
     )
