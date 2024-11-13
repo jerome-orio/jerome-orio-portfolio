@@ -37,15 +37,47 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://jerome-orio-portfolio.vercel.app/'),
   title: {
-    template: 'Jerome Orio | %s | Software Developer Portfolio',
-    default: 'Jerome Orio | Home | Software Developer Portfolio',
+    template: 'Jerome Orio | %s | Full-Stack Software Developer | Portfolio',
+    default: 'Jerome Orio | Home | Full-Stack Software Developer | Portfolio',
   },
   description: 'I’m Jerome Orio, a software developer skilled in JavaScript, React, Angular, Svelte, TypeScript, Node.js, Java, Oracle, and NoSQL. Explore my projects!',
   keywords: [
-    'Jerome Orio', 'Software Developer', 'Portfolio', 'Java Developer', 'JavaScript Developer',
-    'React Developer', 'Next.js Expert', 'Angular Developer', 'Svelte Developer',
-    'Web Development Portfolio', 'TypeScript Programmer', 'Node.js Developer',
-    'Oracle Developer', 'NoSQL Database', 'Tailwind CSS', 'Software Engineer', 'Projects',
+    // Personal Branding
+    'Jerome Orio', 'Orio', 'Jerome', 'Jerome Orio Software Developer', 'Jerome Orio Portfolio',
+
+    // Roles and Titles
+    'Software Developer', 'Software Engineer', 'Java Developer', 'JavaScript Developer',
+    'TypeScript Programmer', 'Front-end Developer', 'Back-end Developer', 'Full-stack Developer',
+    'Web Developer', 'React Developer', 'Next.js Expert', 'Angular Developer', 'Svelte Developer',
+    'Node.js Developer', 'Oracle Developer',
+
+    // Technologies and Frameworks
+    'React', 'Next.js', 'Angular', 'Svelte', 'Node.js', 'Java', 'JavaScript', 'TypeScript',
+    'Oracle', 'NoSQL Database', 'Tailwind CSS', 'RESTful API', 'Spring Boot', 'Elasticsearch',
+    'Kibana', 'Vite', 'SvelteKit', 'Redux', 'GraphQL',
+
+    // Development Skills
+    'Web Development', 'Front-end Development', 'Back-end Development', 'Full-stack Development',
+    'Microservices Architecture', 'Single-page Applications', 'Responsive Web Design',
+    'Client-side Architecture', 'Server-side Development', 'Database Management',
+    'Real-time Applications', 'API Integration', 'Data Visualization', 'Performance Optimization',
+
+    // Tools and Platforms
+    'Vercel', 'GitHub', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Firebase', 'Heroku',
+    'Webpack', 'Babel', 'Postman', 'Figma', 'Jira', 'Agile Development',
+
+    // Project Types and Specializations
+    'Web Development Portfolio', 'Real-time Chat Applications', 'E-commerce Platforms',
+    'Content Management Systems', 'Progressive Web Apps', 'Enterprise Solutions',
+    'Custom Software Solutions', 'Interactive Dashboards', 'Data Analytics Tools',
+    'Mobile-responsive Websites', 'SEO Optimization',
+
+    // Additional Relevant Keywords
+    'Modern Web Technologies', 'UI/UX Design', 'Cross-functional Collaboration',
+    'Agile Methodologies', 'Continuous Integration', 'Continuous Deployment',
+    'Automated Testing', 'Code Optimization', 'Scalable Solutions', 'User-centered Design',
+    'Technical Leadership', 'Problem-solving Skills', 'Innovative Solutions',
+    'High-performance Applications',
   ],
   icons: {
     icon: [{ url: Favicon.src }],

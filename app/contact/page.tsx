@@ -27,17 +27,17 @@ const Contact = () => {
               <div className="text-info text-2xl md:text-4xl font-mono flex-shrink-0">
                 <FaSquareEnvelope />
               </div>
-              <h1 className="text-lg md:text-xl text-base-content whitespace-normal break-words">
+              <h2 className="text-lg md:text-xl text-base-content whitespace-normal break-words">
                 <Link className='link link-hover' href="mailto:jrorio.dev@zohomail.com">jrorio.dev@zohomail.com</Link>
-              </h1>
+              </h2>
             </div>
             <div className='flex justify-center gap-2 items-center'>
               <div className="text-info text-xl md:text-4xl font-mono flex-shrink-0">
                 <FaMapLocationDot />
               </div>
-              <h1 className="text-lg md:text-xl text-base-content whitespace-normal break-words">
+              <h2 className="text-lg md:text-xl text-base-content whitespace-normal break-words">
                 <Link className='link link-hover' href={'https://maps.app.goo.gl/5XSS8B6PznzCjQCVA'} target="_blank" rel="noopener noreferrer">Angeles City, Philippines</Link>
-              </h1>
+              </h2>
             </div>
             <Socials divClassName="flex gap-4 mt-2 justify-center" iconClassName="w-9 h-9 border border-info rounded-full flex justify-center items-center text-base text-info hover:text-primary hover:transition-all duration-500" />
           </div>

@@ -63,16 +63,16 @@ const config: Config = {
         },
         dashAnimation: {
           "0%": {
-            "stroke-dashoffset": "00", "stroke-width": "5"
+            "stroke-dashoffset": "00", "stroke-width": "7"
           },
           "48%": {
-            "stroke-dashoffset": "-40", "stroke-width": "6", "stroke-dasharray": "10 150 0"
+            "stroke-dashoffset": "-40", "stroke-width": "7", "stroke-dasharray": "10 150 0"
           },
           "52%": {
-            "stroke-dashoffset": "-40", "stroke-width": "5",
+            "stroke-dashoffset": "-40", "stroke-width": "7",
           },
           "100%": {
-            "stroke-dashoffset": "00", "stroke-width": "5"
+            "stroke-dashoffset": "00", "stroke-width": "7"
           }
         },
         zoomIn: {
