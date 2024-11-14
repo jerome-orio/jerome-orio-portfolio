@@ -8,6 +8,7 @@ import { Toaster } from 'react-hot-toast';
 import { Suspense } from 'react';
 import Loading from '@/components/common/Loading';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 // Font Imports
 const montserrat = Montserrat({
@@ -115,6 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </main>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
