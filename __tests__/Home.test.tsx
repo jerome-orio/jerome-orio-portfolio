@@ -45,7 +45,7 @@ describe('Home Component', () => {
   it('renders the download CV button', () => {
     const downloadButton = screen.getByRole('link', { name: /download cv/i });
     expect(downloadButton).toBeInTheDocument();
-    expect(downloadButton).toHaveAttribute('href', '/Jerome_Orio_Resume_2024.pdf');
+    expect(downloadButton).toHaveAttribute('href', '/Jerome_Orio_CV.pdf');
   });
 
   it('renders the Socials component', () => {

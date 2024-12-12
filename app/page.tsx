@@ -24,7 +24,7 @@ const Home = () => {
             A software developer passionate about creating innovative solutions. This portfolio highlights my journey through coding, problem-solving, and collaboration.
             Feel free to explore my projects, and don’t hesitate to reach out if you’d like to connect!
           </p>
-          <a className="btn btn-primary" href={'/Jerome_Orio_Resume_2024.pdf'} target="_blank" rel="noopener noreferrer" download aria-label="Download CV">
+          <a className="btn btn-primary" href={'/Jerome_Orio_CV.pdf'} target="_blank" rel="noopener noreferrer" download aria-label="Download CV">
             Download CV
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="animate-bounce w-6 h-6" role="img" aria-label="Download icon">
               <path d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z" />
